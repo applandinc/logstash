@@ -17,7 +17,7 @@
 
 require "pluginmanager/install_strategy_factory"
 
-describe LogStash::PluginManager::InstallStrategyFactory do
+describe LogStash::PluginManager::InstallStrategyFactory, appmap: true do
   subject { described_class }
 
   context "when the plugins args is valid" do

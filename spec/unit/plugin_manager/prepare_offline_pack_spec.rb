@@ -25,7 +25,7 @@ require "webmock"
 
 # This Test only handle the interaction with the OfflinePluginPackager class
 # any test for bundler will need to be done as rats test
-describe LogStash::PluginManager::PrepareOfflinePack do
+describe LogStash::PluginManager::PrepareOfflinePack, appmap: true do
   before do
     WebMock.allow_net_connect!
   end
@@ -131,7 +131,7 @@ describe LogStash::PluginManager::PrepareOfflinePack do
         end
 
         it "should fails" do
-          # ignore the first path part of tmp_zip_file because on Windows the long path is shrinked in the exception message 
+          # ignore the first path part of tmp_zip_file because on Windows the long path is shrinked in the exception message
           expect { subject.run(cmd_args) }.to raise_error Clamp::ExecutionError, /output file destination .+#{::File.basename(tmp_zip_file)} already exist/
         end
       end

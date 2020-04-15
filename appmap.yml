@@ -1,0 +1,8 @@
+name: Logstash
+packages:
+  - path: lib/bootstrap
+  - path: lib/pluginmanager
+  - path: lib/secretstore
+  - path: lib/systeminstall
+  - path: bin/rspec
+  - path: bin/*

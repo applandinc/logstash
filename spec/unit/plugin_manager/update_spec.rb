@@ -18,7 +18,7 @@
 require 'spec_helper'
 require 'pluginmanager/main'
 
-describe LogStash::PluginManager::Update do
+describe LogStash::PluginManager::Update, appmap: true do
   let(:cmd)     { LogStash::PluginManager::Update.new("update") }
   let(:sources) { cmd.gemfile.gemset.sources }
 

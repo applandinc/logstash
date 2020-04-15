@@ -20,7 +20,7 @@ require "uri"
 require "webmock/rspec"
 require "spec_helper"
 
-describe LogStash::PluginManager::PackFetchStrategy::Repository do
+describe LogStash::PluginManager::PackFetchStrategy::Repository, appmap: true do
   subject { described_class }
 
   let(:plugin_name) { "hola-pack" }

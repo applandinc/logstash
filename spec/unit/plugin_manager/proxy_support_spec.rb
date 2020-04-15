@@ -20,7 +20,7 @@ require "rexml/document"
 require "fileutils"
 require "uri"
 
-describe "Proxy support" do
+describe "Proxy support", appmap: true do
   let(:settings) { File.join(Dir.home, ".m2", "settings.xml") }
   let(:settings_backup) { "#{settings}_bk" }
 

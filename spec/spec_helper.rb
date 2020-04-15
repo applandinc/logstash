@@ -33,6 +33,7 @@ require 'rack/test'
 require 'rspec'
 require "json"
 require 'logstash/runner'
+require 'appmap/rspec'
 
 class JSONIOThingy < IO
   def initialize; end

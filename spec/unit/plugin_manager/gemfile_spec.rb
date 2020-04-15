@@ -18,7 +18,7 @@
 require "spec_helper"
 require "pluginmanager/gemfile"
 
-describe "logstash Gemfile Manager" do
+describe "logstash Gemfile Manager, appmap: true do
 
   context LogStash::Gemfile do
 

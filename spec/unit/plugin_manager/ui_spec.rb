@@ -16,7 +16,7 @@
 # under the License.
 
 require "pluginmanager/ui"
-describe LogStash::PluginManager do
+describe LogStash::PluginManager, appmap: true do
   it "set the a default ui" do
     expect(LogStash::PluginManager.ui).to be_kind_of(LogStash::PluginManager::Shell)
   end

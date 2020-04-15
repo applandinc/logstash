@@ -18,7 +18,7 @@
 require "spec_helper"
 require "bundler/cli"
 
-describe LogStash::Bundler do
+describe LogStash::Bundler, appmap: true do
   context "capture_stdout" do
     it "should capture stdout from block" do
       original_stdout = $stdout

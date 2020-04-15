@@ -18,7 +18,7 @@
 require "pluginmanager/pack_fetch_strategy/uri"
 require "stud/temporary"
 
-describe LogStash::PluginManager::PackFetchStrategy::Uri do
+describe LogStash::PluginManager::PackFetchStrategy::Uri, appmap: true do
   subject { described_class }
   context "when we dont have URI path" do
     let(:plugin_path) { "logstash-input-elasticsearch" }

@@ -22,7 +22,7 @@ require "rubygems/specification"
 require "fileutils"
 require "ostruct"
 
-describe LogStash::PluginManager::GemInstaller do
+describe LogStash::PluginManager::GemInstaller, appmap: true do
   let(:plugin_name) { "logstash-input-packtest-0.0.1" }
   let(:simple_gem) { ::File.join(::File.dirname(__FILE__), "..", "..", "support", "pack", "valid-pack", "logstash", "valid-pack", "#{plugin_name}.gem") }
 

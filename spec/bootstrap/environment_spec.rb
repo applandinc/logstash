@@ -18,5 +18,5 @@
 require "spec_helper"
 require "bootstrap/environment"
 
-describe LogStash::Environment do
+describe LogStash::Environment, appmap: true do
 end

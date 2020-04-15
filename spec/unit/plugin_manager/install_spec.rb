@@ -19,7 +19,7 @@ require 'spec_helper'
 require 'pluginmanager/main'
 require "pluginmanager/pack_fetch_strategy/repository"
 
-describe LogStash::PluginManager::Install do
+describe LogStash::PluginManager::Install, appmap: true do
   let(:cmd) { LogStash::PluginManager::Install.new("install") }
 
   context "when validating plugins" do

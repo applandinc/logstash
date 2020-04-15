@@ -32,7 +32,7 @@ def retrieve_dependencies_gems(path)
   Dir.glob(::File.join(path, "logstash", "dependencies", "*.gem"))
 end
 
-describe LogStash::PluginManager::SpecificationHelpers do
+describe LogStash::PluginManager::SpecificationHelpers, appmap: true do
   subject { described_class }
 
   context "when it find gems" do

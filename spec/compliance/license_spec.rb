@@ -18,7 +18,7 @@
 require 'spec_helper'
 require_relative '../../rakelib/default_plugins'
 
-describe "Project licenses" do
+describe "Project licenses", appmap: true do
 
   let(:expected_licenses) {
     ##
